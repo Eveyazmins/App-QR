@@ -1,0 +1,7 @@
+{
+  "name": "QRercarga",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

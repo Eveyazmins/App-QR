@@ -1,0 +1,45 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <ion-card> 
+    <ion-card-header>
+      <ion-card-title>QR Recarga</ion-card-title>
+    </ion-card-header>
+
+    <ion-img [src]="imagen"></ion-img>
+
+    <form [formGroup]="formGroup">
+      <ion-item>
+        <ion-input
+          class="label"      
+          formControlName="email"
+          type="email" 
+          placeholder="Ingrese su correo electronico...." 
+          autofocus="true"       
+        ></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input 
+          class="label"
+          formControlName="clave"
+          type="password" 
+          placeholder="Ingrese su contraseña"        
+        ></ion-input>
+      </ion-item>
+
+      <ion-button 
+        expand="full" 
+        color="danger"
+        (click)="enviar()"
+        [disabled]="formGroup.invalid"
+        >Conectarse
+      </ion-button>
+    </form>    
+  </ion-card>
+  
+  <ion-card>   
+        <ion-button expand="full" (click)="mostrarUsuarios()" color="danger" >Usuarios Test</ion-button>   
+  </ion-card>  
+</ion-content>
